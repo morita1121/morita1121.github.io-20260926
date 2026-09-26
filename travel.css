@@ -1,0 +1,153 @@
+:root{
+    /* 海（小樽）パート */
+    --sea:#2E9CC7;
+    --sea-deep:#146B94;
+    --sky-pale:#E3F5FB;
+    --sea-ink:#17414D;
+
+    /* テーマパーク（志摩スペイン村）パート */
+    --park-red:#E8574A;
+    --park-yellow:#FFC93C;
+    --park-pink:#FF6F91;
+    --park-purple:#8C6BC9;
+    --park-cream:#FFF7EA;
+
+    --ink:#22333A;
+    --ink-soft:#6C848C;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', sans-serif;
+    line-height:1.9;
+  }
+  main{max-width:680px; margin:0 auto; padding:70px 22px 90px;}
+
+  /* ============ ヘッダー ============ */
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Quicksand', sans-serif; font-weight:600; font-size:12.5px;
+    letter-spacing:.1em; color:var(--sea-deep);
+    background:var(--sky-pale); border-radius:999px; padding:7px 16px;
+    margin-bottom:20px;
+  }
+  h1{
+    font-family:'Kaisei Decol', serif;
+    font-weight:700; font-size:clamp(24px,4.6vw,30px);
+    line-height:1.55; margin:0 0 46px;
+  }
+
+  /* ============ セクション見出し共通 ============ */
+  .sec-head{
+    display:flex; align-items:center; gap:10px;
+    margin:0 0 20px;
+  }
+  .sec-head .icon{font-size:22px;}
+  .sec-head h4{
+    font-family:'Kaisei Decol', serif; font-weight:700; font-size:18px;
+    margin:0; color:var(--ink);
+  }
+
+  section{margin-bottom:56px;}
+  section:last-child{margin-bottom:0;}
+
+  /* ============ 小樽・海パート（ポストカード風） ============ */
+  .postcard{
+    background:linear-gradient(160deg, var(--sky-pale) 0%, #fff 60%);
+    border:1px solid #D6ECF3;
+    border-radius:20px;
+    padding:30px 30px 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .postcard-stamp{
+    position:absolute; top:18px; right:18px;
+    width:46px; height:58px;
+    background:#fff; border:2px dashed #B9DCE8;
+    border-radius:4px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:22px;
+    transform:rotate(6deg);
+  }
+  p.ruled-line-sea{
+    font-size:16.5px;
+    line-height:2.3;
+    color:var(--ink);
+    background-image:linear-gradient(180deg, #D6ECF3 1px, transparent 1px);
+    background-size:100% 2.3em;
+    background-position:bottom 1px center;
+    margin:0 0 26px;
+    padding-right:60px;
+  }
+  .wave-bottom{display:block; width:100%; margin-bottom:-2px;}
+  .otaru-tags{
+    display:flex; gap:8px; flex-wrap:wrap; padding-bottom:22px;
+  }
+  .otaru-tags span{
+    font-family:'Quicksand', sans-serif; font-weight:600; font-size:12px;
+    background:#fff; color:var(--sea-deep); border:1px solid #D6ECF3;
+    border-radius:999px; padding:5px 13px;
+  }
+
+  /* ============ テーマパークパート（チケット風） ============ */
+  .bunting{
+    display:flex; justify-content:space-between; height:20px; margin-bottom:-1px; padding:0 6px;
+  }
+  .bunting span{
+    width:0; height:0;
+    border-left:9px solid transparent;
+    border-right:9px solid transparent;
+    border-top:16px solid var(--flag-color);
+  }
+
+  .ticket-card{
+    display:flex;
+    background:var(--white);
+    border-radius:0 0 18px 18px;
+    overflow:hidden;
+    box-shadow:0 10px 28px rgba(232,87,74,.14);
+  }
+  .ticket-stub{
+    flex:0 0 84px;
+    background:linear-gradient(180deg, var(--park-red), var(--park-pink));
+    color:#fff;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+    position:relative;
+    padding:20px 6px;
+  }
+  .ticket-stub .ferris{font-size:26px;}
+  .ticket-stub .admit{
+    writing-mode:vertical-rl;
+    font-family:'Quicksand', sans-serif; font-weight:700; font-size:11px;
+    letter-spacing:.2em;
+  }
+  .ticket-stub::after{
+    content:"";
+    position:absolute; right:-1px; top:0; bottom:0; width:2px;
+    background-image:radial-gradient(circle, #fff 1.6px, transparent 1.6px);
+    background-size:100% 12px;
+  }
+  .ticket-main{flex:1; padding:26px 28px;}
+  p.ruled-line-park{
+    font-size:16.5px;
+    line-height:2.3;
+    color:var(--ink);
+    background-image:linear-gradient(180deg, #F3E4D0 1px, transparent 1px);
+    background-size:100% 2.3em;
+    background-position:bottom 1px center;
+    margin:0 0 22px;
+  }
+  .park-tags{display:flex; gap:8px; flex-wrap:wrap;}
+  .park-tags span{
+    font-family:'Quicksand', sans-serif; font-weight:600; font-size:12px;
+    background:var(--park-cream); color:#8A4A1E; border:1px solid #F3DCB8;
+    border-radius:999px; padding:5px 13px;
+  }
+
+  footer{
+    text-align:center; margin-top:60px;
+    font-family:'Quicksand', sans-serif; font-size:12.5px; color:var(--ink-soft);
+  }
